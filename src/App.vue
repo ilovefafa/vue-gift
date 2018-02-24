@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+     <el-container>
+      <el-header><header-e></header-e></el-header>
+      <el-main>
+        <h1>i am main</h1>
+        <router-view/>
+      </el-main>
+      <el-footer><footer-e></footer-e></el-footer>
+    </el-container>
   </div>
 </template>
 
 <script>
+import headerE from './components/header-e.vue'
+import footerE from './components/footer-e.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    headerE: headerE,
+    footerE: footerE
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
